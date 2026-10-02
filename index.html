@@ -1032,7 +1032,7 @@ async function send(text){
   const shell=addAiShell();
   try{
     const res=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-      model:'llama-3.3-70b-versatile',
+      model:'openai/gpt-oss-120b',
       messages:[{role:'system',content:buildSystem(mode)},...history],
       max_tokens:1200,
       temperature:.88
